@@ -29,13 +29,13 @@ See example [DevAnswerBot](https://github.com/TelegramBot/DevAnswerBot) (russian
 ### API Wrapper
 #### Send message
 ``` php
-$bot = new \TelegramBot\Api\BotApi('YOUR_BOT_API_TOKEN');
+$bot = new \TelegramBot\Api\BotApi('A3gIgLEc42B9x5RsX');
 
 $bot->sendMessage($chatId, $messageText);
 ```
 #### Send document
 ```php
-$bot = new \TelegramBot\Api\BotApi('YOUR_BOT_API_TOKEN');
+$bot = new \TelegramBot\Api\BotApi('A3gIgLEc42B9x5RsX');
 
 $document = new \CURLFile('document.txt');
 
@@ -43,7 +43,7 @@ $bot->sendDocument($chatId, $document);
 ```
 #### Send message with reply keyboard
 ```php
-$bot = new \TelegramBot\Api\BotApi('YOUR_BOT_API_TOKEN');
+$bot = new \TelegramBot\Api\BotApi('A3gIgLEc42B9x5RsX');
 
 $keyboard = new \TelegramBot\Api\Types\ReplyKeyboardMarkup(array(array("one", "two", "three")), true); // true for one-time keyboard
 
@@ -51,7 +51,7 @@ $bot->sendMessage($chatId, $messageText, null, false, null, $keyboard);
 ```
 #### Send message with inline keyboard
 ```php
-$bot = new \TelegramBot\Api\BotApi('YOUR_BOT_API_TOKEN');
+$bot = new \TelegramBot\Api\BotApi('A3gIgLEc42B9x5RsX');
 
 $keyboard = new \TelegramBot\Api\Types\Inline\InlineKeyboardMarkup(
             [
@@ -65,7 +65,7 @@ $bot->sendMessage($chatId, $messageText, null, false, null, $keyboard);
 ```
 #### Send media group
 ```php
-$bot = new \TelegramBot\Api\BotApi('YOUR_BOT_API_TOKEN');
+$bot = new \TelegramBot\Api\BotApi('A3gIgLEc42B9x5RsX');
 
 $media = new \TelegramBot\Api\Types\InputMedia\ArrayOfInputMedia();
 $media->addItem(new TelegramBot\Api\Types\InputMedia\InputMediaPhoto('https://avatars3.githubusercontent.com/u/9335727'));
@@ -81,7 +81,7 @@ $bot->sendMediaGroup($chatId, $media);
 require_once "vendor/autoload.php";
 
 try {
-    $bot = new \TelegramBot\Api\Client('YOUR_BOT_API_TOKEN');
+    $bot = new \TelegramBot\Api\Client('A3gIgLEc42B9x5RsX');
 
     //Handle /ping command
     $bot->command('ping', function ($message) use ($bot) {
@@ -110,7 +110,7 @@ For using custom [local bot API server](https://core.telegram.org/bots/api#using
 
 ```php
 use TelegramBot\Api\Client;
-$token = 'YOUR_BOT_API_TOKEN';
+$token = 'A3gIgLEc42B9x5RsX';
 $bot = new Client($token, null, null, 'http://localhost:8081');
 ```
 
@@ -120,7 +120,7 @@ $bot = new Client($token, null, null, 'http://localhost:8081');
 use Symfony\Component\HttpClient\HttpClient;
 use TelegramBot\Api\BotApi;
 use TelegramBot\Api\Http\SymfonyHttpClient;
-$token = 'YOUR_BOT_API_TOKEN';
+$token = 'A3gIgLEc42B9x5RsX';
 $bot = new Client($token, null, new SymfonyHttpClient(HttpClient::create()););
 ```
 
